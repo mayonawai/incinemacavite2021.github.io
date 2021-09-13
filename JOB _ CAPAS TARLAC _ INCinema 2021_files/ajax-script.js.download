@@ -1,0 +1,38 @@
+jQuery( document ).ready(function($){
+  function createCookie(name,value,mins) {
+    if (mins) {
+      var date = new Date();
+      date.setTime(date.getTime()+(mins*60*1000));
+      var expires = "; expires="+date.toGMTString();
+    }
+    else var expires = "";
+    document.cookie = name+"="+value+expires+"; path=/";
+  }
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+
+  var id = parseInt($('.post-id').text());
+  var data = {
+    'action': 'stg_view_counter', 
+    'id': id
+  };
+  $('.post-btn, .post-img').click(function(){
+    if( readCookie('view_instance') != 'true' ){
+      setTimeout(function(){
+        $.post(counter.ajax_url, data, function(response) {
+
+        });
+      }, 1800000); //30 mins = 1800000
+      createCookie('view_instance', 'true', 29); //29
+    }
+  });
+  
+});

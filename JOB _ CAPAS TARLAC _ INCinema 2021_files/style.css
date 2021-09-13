@@ -1,0 +1,208 @@
+/* 
+Theme Name:		Hello Elementor Child
+Theme URI:		https://elementor.com/
+Description:	Hello Elementor Child is a child theme of Hello Elementor, created by Elementor team
+Author:			Elementor Team
+Author URI:		https://elementor.com/
+Template:		hello-elementor
+Version:		1.0.0
+Text Domain:	hello-elementor-child
+Tags:           flexible-header, custom-colors, custom-menu, custom-logo, editor-style, featured-images, rtl-language-support, threaded-comments, translation-ready
+*/
+
+/*
+    Add your custom styles here
+*/
+
+
+/*======================
+    #HOME
+======================*/
+
+
+
+/*======================
+    #SINGLE LOKAL
+======================*/
+.single-post header {
+  display: none;
+}
+.single-post main {
+  padding-top: 3rem;
+}
+.single-post .comments-area {
+  display: none;
+}
+.lokal-item {
+  padding-bottom: 6rem;
+}
+.lokal-item .post-id {
+  display: none;
+}
+.lokal-item .post-content {
+  text-align: center;
+}
+.lokal-item .post-title {
+  font-size: 4rem;
+  margin-bottom: 3.5rem;
+}
+.lokal-item .post-btn {
+  display: inline-block;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 1rem 3rem 1.1rem;
+  margin-bottom: 4rem;
+  border-radius: 0.6rem;
+  text-shadow: 1px 1px rgb(0 0 0 / 68%);
+  letter-spacing: 0.4px;
+  background: linear-gradient(0deg, #167111 0%,#2ef747 100%);
+  border: 1px solid #00a70c;
+  box-shadow: 0 0 10px 0 rgba(46,247,71,.5), 0 0 10px 0 rgba(46,247,71,.3), inset 2px 2px 0 rgba(255,255,255,.5), -1px -1px 0 #00a70c;
+  animation: stg-pulse 1.5s infinite, stg-pulse2 1.5s infinite;
+}
+@keyframes stg-pulse {
+  0% { transform: scale(.95) }
+  50% { transform: scale(1) }
+  100% { transform: scale(.95) }
+}
+@keyframes stg-pulse2 {
+  70% { box-shadow: 0 0 10px 25px transparent,0 0 10px 25px transparent,inset 2px 2px 0 rgba(255,255,255,.5),-1px -1px 0 #00a70c }
+  100% { box-shadow: 0 0 10px 0 transparent,0 0 10px 0 transparent,inset 2px 2px 0 rgba(255,255,255,.5),-1px -1px 0 #00a70c }
+}
+.lokal-item .post-img {
+  display: inline-block;
+}
+.lokal-item .post-img img {
+  border-radius: 1rem;
+}
+
+.stg-responsive-video-embed {
+  width: 100%;
+  margin: 0 auto;
+}
+.stg-responsive-video-embed .wrap {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  padding: 0 0 56.25% 0;
+}
+.stg-responsive-video-embed .iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.stg-responsive-video-embed::-webkit-scrollbar,
+.stg-responsive-video-embed .wrap::-webkit-scrollbar,
+.stg-responsive-video-embed .iframe::-webkit-scrollbar {
+  display: none;
+}
+
+.page .site-branding {
+  width: 100%;
+  max-width: 100%;
+}
+.page header a {
+  display: block;
+  color: #000;
+  font-size: 5rem;
+  text-align: center;
+  padding-top: 2rem;
+  pointer-events: none;
+  margin-bottom: 3rem;
+}
+.page .lokals-wrap {
+  max-width: 40rem;
+  margin: 0 auto 6rem;
+}
+.page .lokals-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: center;
+  padding: 1rem;
+}
+.page .lokals-item::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.2);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+.page .lokals-item:nth-child(even) {
+  background-color: #f5f5f5;
+}
+.page .lokals-item:hover::before {
+  opacity: 1;
+}
+.page .lokals-item .post-title,
+.page .lokals-item .view-counter {
+  font-size: 1.8rem;
+  width: 50%;
+  max-width: 20rem;
+}
+.page a.lokals-item {
+  color: #000;
+}
+.page .lokals-header::before,
+.page .lokals-footer::before {
+  display: none;
+}
+.page .lokals-header .post-title,
+.page .lokals-header .view-counter {
+  font-size: 3rem;
+  pointer-events
+}
+.page .lokals-footer .post-title,
+.page .lokals-footer .view-counter {
+  color: #f00;
+  font-size: 3rem;
+}
+
+
+/*======================
+    #MEDIA QUERIES
+======================*/
+@media only screen and (max-width:1024px) {
+
+}
+@media only screen and (max-width:960px) {
+
+}
+@media only screen and (max-width:767px) {
+  .single-post main {
+    padding-top: 3rem;
+  }
+  .lokal-item h2 {
+    font-size: 3rem;
+  }
+  .lokal-item {
+    padding-bottom: 3rem;
+  }
+}
+
+
+
+
+
+
+/*======================
+    #FONT SIZING
+======================*/
+html { font-size: 62.5%; }
+@media only screen and (max-width:1600px) { html { font-size: 56.3%;  } }
+@media only screen and (max-width:1440px) { html { font-size: 50%;    } }
+@media only screen and (max-width:1280px) { html { font-size: 48%;    } }
+@media only screen and (max-width:1023px) { html { font-size: 46%;    } }
+@media only screen and (max-width:960px)  { html { font-size: 50%;      } }
+@media only screen and (max-width:767px)  { html { font-size: 55.5555%; } }
